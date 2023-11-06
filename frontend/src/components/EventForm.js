@@ -50,9 +50,10 @@ function EventForm({ method, event }) {
 
 export default EventForm;
 
-
+// all form data will be handed to Action
 export async function EventAction({request,params}){
   const eventMethod = request.method;
+  console.log(request)
   const data = await request.formData();
   const dataObj ={
     title: data.get('title'),
