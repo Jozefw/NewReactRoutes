@@ -5,7 +5,6 @@ import classes from './NewsletterSignup.module.css';
 function NewsletterSignup() {
   const fetcher = useFetcher();
   const {data,state} = fetcher;
-  console.log(data)
   useEffect(() => {
     if (state === 'idle' && data && data.message){
       window.alert(data.message)

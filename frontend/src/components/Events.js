@@ -5,9 +5,8 @@ import EventsList from '../components/EventsList';
 function Events() {
   const {eventsDef} = useLoaderData();
   //events will have the key value pair from the defer in getEventsData
-  console.log(eventsDef)
   return (
-    <Suspense fallback={<p style={{textAlign: 'center'}}>...Loading...</p>}>
+    <Suspense fallback={<p style={{textAlign: 'center'}}>...Loading...Loading...</p>}>
     <Await resolve = {eventsDef}>
       {(loadedEvents)=><EventsList events={loadedEvents}></EventsList>}
     </Await>
